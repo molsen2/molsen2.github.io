@@ -40,7 +40,7 @@
         //createPlatform(400, 250);
         //createPlatform(170, 460, 0.5);
         
-        createPlatform(450, 500, .3);
+        
         /*createPlatform(300, 200, 4);
         createPlatform(0, 200);
         createPlatform(0, 250);
@@ -63,7 +63,15 @@
         createPlatform(0, 600);
         createPlatform(300, 600, 4);*/
 
-        createPlatform(100, 75);
+   
+        createPlatform(100, 40, .5, .3);//top of box//
+        createPlatform(100, 40, .1, 3);//left of box//
+        createPlatform(260, 40, .1, 3);//right of box//
+        createPlatform(100, 125, .5, .3);//bottom of box//
+
+        createPlatform(300, 570, .45);
+        createPlatform(400, 200, .1, 3);
+        createPlatform(625, 400, .1, 3);
         
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
