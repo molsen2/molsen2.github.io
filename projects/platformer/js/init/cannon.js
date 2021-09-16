@@ -27,21 +27,21 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        /*createCannon("top", 450);
+        createCannon("top", 450);
         createCannon("left", 325);
         createCannon("left", 375);
         createCannon("left", 425);
         createCannon("left", 475);
-        createCannon("left", 525);
-        createCannon("left", 575);
+        //createCannon("left", 525);
+        //createCannon("left", 575);
 
         createCannon("right", 300);
         createCannon("right", 350);
         createCannon("right", 400);
         createCannon("right", 450);
         createCannon("right", 500);
-        createCannon("right", 550);
-        createCannon("right", 600);
+        //createCannon("right", 550);
+        //createCannon("right", 600);
 
         createCannon("top", 300);
         createCannon("top", 350);
@@ -57,7 +57,7 @@
         createCannon("bottom", 475);
         createCannon("bottom", 525);
         createCannon("bottom", 575);
-        createCannon("bottom", 625);*/
+        createCannon("bottom", 625);
 
         
        
