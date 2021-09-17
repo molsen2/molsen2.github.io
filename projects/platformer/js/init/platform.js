@@ -60,8 +60,8 @@
 
         createPlatform(0, 550);
         createPlatform(300, 550, 4);
-        //createPlatform(0, 600);
-        //createPlatform(300, 600, 4);
+        createPlatform(0, 600);
+        createPlatform(300, 600, 4);
 
    
         /*createPlatform(100, 40, .5, .3);//top of box//
