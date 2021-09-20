@@ -60,8 +60,13 @@
 
         createPlatform(0, 550);
         createPlatform(300, 550, 4);
+<<<<<<< HEAD
         //createPlatform(0, 600);
         //createPlatform(300, 600, 4);*/
+=======
+        createPlatform(0, 600);
+        createPlatform(300, 600, 4);
+>>>>>>> 1ec0793119db03e9c73576839a7911c46a9b3728
 
    
         createPlatform(100, 40, .5, .3);//top of box//
