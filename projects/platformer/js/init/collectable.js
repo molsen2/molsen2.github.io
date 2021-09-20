@@ -7,9 +7,9 @@
     let type = {
         db: {assetKey: 'db', points: 10},
         max: {assetKey: 'max', points: 20},
-        steve: {assetKey: 'steve', points: 50},
+        steve: {assetKey: 'steve', points: 30},
         grace: {assetKey: 'grace', points: 40},
-        kennedi: {assetKey: 'kennedi', points: 30}
+        kennedi: {assetKey: 'kennedi', points: 50}
     };
     
     /**
