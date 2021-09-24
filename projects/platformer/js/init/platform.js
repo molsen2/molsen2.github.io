@@ -4,6 +4,7 @@
     window.opspark.platform = window.opspark.platform || {};
     
     let platform = window.opspark.platform;
+    let platformworld = window.opspark.platformworld;
     
     /**
      * init: This function initializes the platforms for the level.
@@ -26,6 +27,8 @@
     function init(game) {
         let createPlatform = platform.create;
 
+        let createPlatformWorld = platformworld.create;
+
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
@@ -34,7 +37,7 @@
          * asset, giving it a scaleX and scaleY of 2 will stretch it across the 
          * bottom of the game.
          */
-        createPlatform(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
+        createPlatformWorld(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
 
         // example:
         //createPlatform(400, 250);
@@ -59,18 +62,18 @@
         createPlatform(300, 500, 4);
 
         createPlatform(0, 550);
-        createPlatform(300, 550, 4);
+        createPlatform(300, 550, 4);*/
 
 
    
-        createPlatform(100, 40, .5, .3);//top of box//
-        createPlatform(100, 40, .1, 3);//left of box//
-        createPlatform(260, 40, .1, 3);//right of box//
-        createPlatform(100, 125, .5, .3);//bottom of box//
+       // createPlatform(100, 40, .5, .3);//top of box//
+        //createPlatform(100, 40, .1, 3);//left of box//
+       // createPlatform(260, 40, .1, 3);//right of box//
+        //createPlatform(100, 125, .5, .3);//bottom of box//
 
-        createPlatform(300, 570, .45);
-        createPlatform(400, 200, .1, 3);
-        createPlatform(625, 400, .1, 3);*/
+        createPlatform(300, 570,);
+        createPlatform(400, 200,);
+        createPlatform(625, 400,);
         
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
