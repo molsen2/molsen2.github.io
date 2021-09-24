@@ -2,6 +2,7 @@
     'use strict';
     window.opspark = window.opspark || {};
     window.opspark.platform = window.opspark.platform || {};
+    window.opspark.platformworld = window.opspark.platformworld || {};
     
     let platform = window.opspark.platform;
     let platformworld = window.opspark.platformworld;
