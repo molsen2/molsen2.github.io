@@ -2,10 +2,10 @@
     'use strict';
     window.opspark = window.opspark || {};
     window.opspark.platform = window.opspark.platform || {};
-    window.opspark.platformworld = window.opspark.platformworld || {};
+   // window.opspark.platformworld = window.opspark.platformworld || {};
     
     let platform = window.opspark.platform;
-    let platformworld = window.opspark.platformworld;
+   // let platformworld = window.opspark.platformworld;
     
     /**
      * init: This function initializes the platforms for the level.
@@ -28,7 +28,7 @@
     function init(game) {
         let createPlatform = platform.create;
 
-        let createPlatformWorld = platformworld.create;
+       // let createPlatformWorld = platformworld.create;
 
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
@@ -38,7 +38,7 @@
          * asset, giving it a scaleX and scaleY of 2 will stretch it across the 
          * bottom of the game.
          */
-        createPlatformWorld(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
+        createPlatform(0, game.world.height - 27, 4, 10);    // DO NOT DELETE
 
         // example:
         //createPlatform(400, 250);
