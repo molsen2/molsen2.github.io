@@ -72,9 +72,9 @@
        // createPlatform(260, 40, .1, 3);//right of box//
         //createPlatform(100, 125, .5, .3);//bottom of box//
 
-        createPlatform(300, 570, 1, .6);
-        createPlatform(400, 200, 1, .6);
-        createPlatform(625, 400, 1, .6);
+        createPlatform(300, 570, 1, .6);//bottom
+        createPlatform(600, 270, .2);//top
+        createPlatform(625,460, 1, .6);//middle
         
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
