@@ -17,8 +17,9 @@
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
-			height: 100%;
-			width:100%;
+			height: 100vh;
+			width: 100vh;
+			
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -51,6 +52,9 @@
 			function moveBoxTo(newPositionX) {
 				box.css("left", newPositionX);
 			}
+			/*function moveBoxToBack(newPositionX){
+				box.css("right", newPositionX);
+			}*/
 
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
@@ -64,6 +68,7 @@
 			// TODO 2 - Variable declarations 
 			
 			var positionX = 0;
+			var speed = 10;
 
 			
 
@@ -75,17 +80,25 @@
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
-			function update() {
-				positionX = positionX +10
+
+				function update() {
+				positionX = positionX + speed;
 				moveBoxTo(positionX);
-
-				/*if(positionX >=800){
-					positionX = positionX -10;
-					moveBoxTo(positionX)
-				}*/
-
+				
+				if(positionX === 1290){
+					/*positionX = positionX -10
+					moveBoxTo(positionX);*/
+					speed = -speed;
+				}
+				if(positionX === 0){
+					speed = 0;
+					speed = 10;
+					positionX = positionX +speed;
+				}
+			
 			};
-
+				
+		
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
