@@ -46,7 +46,7 @@
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
-
+			var boardHeight = board.height();
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
 			
@@ -54,12 +54,13 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY);
 			}
-			/*function moveBoxToBack(newPositionX){
+			function moveBoxToBack(newPositionX){
 				box.css("right", newPositionX);
-			}*/
+			}
 
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
@@ -73,14 +74,11 @@
 			// TODO 2 - Variable declarations 
 			
 			var positionX = 0;
-			var speed = 10;
+			var speedX = 10;
 			var points = 0;
-
-			
-
-			
-
-			
+			var speedY = 10;
+			var positionY = 0;
+		
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
@@ -89,13 +87,23 @@
 
 				function update() {
 				positionX = positionX + speed;
-				moveBoxTo(positionX);
+				positionX = math.Random()*100 +speed;
+				moveBoxTo(positionX, positionY);
+			
 			
 				if(positionX > boardWidth){
-					speed = -speed;
+					speedX = -speedX;
 				}
 				if(positionX < 0){
-					speed = -speed;
+					speedX = -speedX;
+				}
+					speedY = -speedY;
+				}
+				if(positionY > boardHeight){
+					speedY = -speedY
+				}
+				if(positionY < 0){
+					speedY = -speedY;
 				}
 			
 			
@@ -108,16 +116,23 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				var randomSpot = Math.random()*100;
+				//return Math.random()*100;
 				
 				points = points +1;
 				changeBoxText(points);
-				if (speed >= 0){
+				if (speedX >= 0){
 					speed +=3;
 				}
 				
-				else if(speed < 0){
+				else if(speedX < 0){
 					speed -=3;
+				}
+
+				if(speedY >= 0){
+					speed += 3
+				}
+				else if(speedY < 0){
+					speedy -= 3;
 				}
 
 				
