@@ -45,8 +45,8 @@
 			
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
+			var boardHeight = jQuery(window).height();
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
-			var boardHeight = board.height();
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
 			
@@ -87,7 +87,8 @@
 
 				function update() {
 				positionX = positionX + speed;
-				positionX = math.Random()*100 +speed;
+				//positionX = math.Random()*100 +speed;
+				positionY = positionY +speedY;
 				moveBoxTo(positionX, positionY);
 			
 			
