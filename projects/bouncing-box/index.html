@@ -54,9 +54,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX /*newPositionY*/) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
-				//box.css("top", newPositionY);
+				box.css("top", newPositionY);
 			}
 
 			// changes the text displayed on the Box
@@ -73,8 +73,8 @@
 			var positionX = 0;
 			var speed = 10;
 			var points = 0;
-			//var speedY = 10;
-			//var positionY = 0;
+			var speedY = 10;
+			var positionY = 0;
 		
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -85,8 +85,8 @@
 				function update() {
 				positionX = positionX + speed;
 				//positionX = math.Random()*100 +speed;
-				//positionY = positionY +speedY;
-				moveBoxTo(positionX/*, positionY*/);
+				positionY = positionY +speedY;
+				moveBoxTo(positionX, positionY);
 			
 			
 				if(positionX > boardWidth){
@@ -95,12 +95,12 @@
 				if(positionX < 0){
 					speed = -speed;
 				}
-				/*if(positionY > boardHeight){
+				if(positionY > boardHeight){
 					speedY = -speedY
 				}
 				if(positionY < 0){
 					speedY = -speedY;
-				}*/
+				}
 			
 			
 			};
@@ -124,12 +124,12 @@
 					speed -=3;
 				}
 
-				/*if(speedY >= 0){
+				if(speedY >= 0){
 					speedY += 3
 				}
 				else if(speedY < 0){
 					speedY -= 3;
-				}*/
+				}
 
 				
 			};
