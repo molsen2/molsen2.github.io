@@ -39,7 +39,7 @@
         // example: 
         
         createCollectable(type.steve, 150, 50);
-        createCollectable(type.diamond, 150, 200);
+        //createCollectable(type.diamond, 150, 200);
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
