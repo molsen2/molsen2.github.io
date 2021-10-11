@@ -75,11 +75,11 @@
         createPlatform(275, 580, .7, .3);//bottom
         createPlatform(825, 390, .2, .6);//stair 1
         createPlatform(575, 500, .7, .3);//middle
-        createPlatform(625, 315, .2, .6);//stair 2
+        createPlatform(575, 315, .2, .6);//stair 2
         createPlatform(800, 240, .2, .6);//stair 3
         createPlatform(475, 165, .7, .3);//top
         createPlatform(300, 240, .2, .6);//staircase 1
-        
+        createPlatform(100, 165, .2, .3);//staircase 2, battery
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     }
