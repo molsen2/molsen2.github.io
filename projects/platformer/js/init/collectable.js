@@ -38,9 +38,9 @@
         
         // example: 
         
-        createCollectable(type.steve, 565, 250);
-        createCollectable(type.steve, 565, 70);
-        createCollectable(type.kennedi, 125, 100, 6, .7);
+        createCollectable(type.steve, 660, 400);//bottom gears
+        createCollectable(type.steve, 565, 70);//top gears
+        createCollectable(type.kennedi, 125, 100, 6, .7);//battery
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
