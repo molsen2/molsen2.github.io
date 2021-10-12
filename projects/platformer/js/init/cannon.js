@@ -32,7 +32,8 @@
        createCannon("top", 75);//left battery border
        createCannon("top", 200);//right battery border
        createCannon("left", 300);//topleft cannon
-       
+       createCannon("bottom", 600);//bottom cannon
+
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     };
