@@ -1,7 +1,5 @@
 var scienceQuestions = [];
 var seventiesHits = [];
-var fiveLetterWords = [];
-var computerScience = [];
 var randomHolidays = [];
 var literature = [];
 
@@ -14,6 +12,6 @@ for(times = 0; times <= 1; times++){
 }
 
 function assignNum(){
-    randomNum = (Math.floor(Math.random()*10));
+    randomNum = (Math.floor(Math.random(0,7)*10));
     return randomNum;
 }
