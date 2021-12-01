@@ -62,7 +62,7 @@ function chooseQ(){
 
 function gradeAnswer(response){
     if(response === scienceAs[0].toLowerCase()){
-        console.log("Correct!");
+        alert("Correct!");
     }
 
 }
