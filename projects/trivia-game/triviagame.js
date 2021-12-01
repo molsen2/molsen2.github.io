@@ -38,6 +38,7 @@ alert("There will be one Daily Double among the questions where you can wager at
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
 var answer = chooseQ();
 gradeAnswer(answer);
+var verdict = gradeAnswer()
 
 //FUNCTIONS
 function enterNames(){
@@ -56,7 +57,7 @@ function chooseQ(){
         /*var answer = prompt(category.toLowerCase()[spot]);
         return answer;*/
         //can't use category generically bc it is taken in as a string and "science"[0] doesn't work
-        alert(category[cash]);
+        var response = prompt(scienceQs[spot]);
     }
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
         prompt(seventieshitsQs[spot]);
@@ -67,13 +68,19 @@ function chooseQ(){
     else if(category.toLowerCase() === "American Literature"){
         prompt(americanLiterature[spot]);
     }
-    return spot;
+    return response;
 }
 
 function gradeAnswer(response){
     if(response === scienceAs[0].toLowerCase()){
+        player1Total+=cash
         alert("Correct!");
+        
+        return true;
     }
+}
+
+function correctAnswer(){
 
 }
 
