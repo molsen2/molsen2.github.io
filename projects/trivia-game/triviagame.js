@@ -46,8 +46,10 @@ function chooseQ(){
     var cash = prompt("Cash amount?");
     var spot = (cash/200)-1;
     if(category.toLowerCase() === "science"){
-        var answer = prompt(science[spot]);
-        return answer;
+        /*var answer = prompt(category.toLowerCase()[spot]);
+        return answer;*/
+        //can't use category generically bc it is taken in as a string and "science"[0] doesn't work
+        alert(category[cash]);
     }
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
         prompt(seventieshitsQs[spot]);
