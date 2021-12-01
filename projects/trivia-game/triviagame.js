@@ -1,9 +1,22 @@
-var firstRowQs= [];
-var secondRowQs = [];
-var thirdRowQs = [];
-var fourthRowQs = [];
-var fifthRowQs = [];
-var sixthRowQs = [];
+/*var firstRowQs= ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
+firstRowQs.push("The Doors got their name from a book written by this author.");
+firstRowQs.push("Scholar and activist Dr. Maulana Karenga established this holiday in California in 1966.");
+firstRowQs.push("In which U.S. state was the asylum of One Flew Over the Cuckoo's Nest located?");
+var secondRowQs = ["This Saturn moon has a methane cycle, differentiating it from the other moons of the planet."];
+var thirdRowQs = ["ATP, which stands for this, is the molecular unit of energy that gives our bodied fuel on a cellular level."];
+var fourthRowQs = ["The study of optics has to do with..."];
+var fifthRowQs = ["This refers to the amount of blood cells in a certain amount of blood."];
+var sixthRowQs = ["This prominent Renaissance scientist is credited with the discovery of the pendulum."];*/
+
+var scienceQs = ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
+var seventiesHitsQs = [];
+var holidaysQs = [];
+var americanLiteratureQs = [];
+
+var scienceAs = [];
+var seventiesHitsAs = [];
+var holidaysAs = [];
+var americanLiteratureAs = [];
 
 var player1Total; var player2Total; var player3Total;
 
@@ -15,14 +28,33 @@ player2 = enterNames();
 player3 = enterNames();
 
 alert("You will have four categories today with six questions each. The categories are as follows..")
-alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar amounts range from $100-$600 and increase by $100 depending on the placement of the questions chosen.")
+alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar amounts range from $200-$1,000 and increase by $200 for each row of questions.")
 alert("There will be one Daily Double among the questions where you can wager at least $1,000.")
-alert("Are we ready for some trivia? "+player1+ " choose your first question.");
-
+alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
+chooseQ();
 
 //FUNCTIONS
 function enterNames(){
-    var name = prompt("Enter Player 1's Name");
+    var name = prompt("Enter Player Name");
     alert("Welcome "+name+"!");
+    return name;
+}
+
+function chooseQ(){
+    var category = prompt("Category?");
+    var cash = prompt("Cash amount?");
+    var spot = (cash/200)-1;
+    if(category === "Science"){
+        alert(scienceQs[spot]);
+    }
+    else if(category === "Seventies' Hits"){
+        alert(seventiesHits[spot]);
+    }
+    else if(category === "Holidays"){
+        alert(holidays[spot]);
+    }
+    else if(category === "American Literature"){
+        alert(americanLiterature[spot]);
+    }
 }
 
