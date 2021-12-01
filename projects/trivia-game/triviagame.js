@@ -36,8 +36,15 @@ alert("You will have four categories today with six questions each. The categori
 alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar amounts range from $200-$1,000 and increase by $200 for each row of questions.")
 alert("There will be one Daily Double among the questions where you can wager at least $1,000.")
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
-var answer = chooseQ();
-gradeAnswer(answer);
+
+
+var category = prompt("Category?")
+var cash = prompt("Cash amount?");
+var returnArray = [chooseQ(category, cash)];
+alert(returnArray);
+var answer = returnArray[0];
+var index = returnArray[1];
+gradeAnswer(answer, index);
 var verdict = gradeAnswer()
 
 //FUNCTIONS
@@ -47,35 +54,31 @@ function enterNames(){
     return name;
 }
 
-function cashValue(){}
-
-function chooseQ(){
-    var category = prompt("Category?");
-    var cash = prompt("Cash amount?");
-    var spot = (cash/200)-1;
-    if(category.toLowerCase() === "science"){
-        /*var answer = prompt(category.toLowerCase()[spot]);
-        return answer;*/
-        //can't use category generically bc it is taken in as a string and "science"[0] doesn't work
-        var response = prompt(scienceQs[spot]);
-    }
-    else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
-        prompt(seventieshitsQs[spot]);
-    }
-    else if(category.toLowerCase() === "Holidays"){
-        prompt(holidays[spot]);
-    }
-    else if(category.toLowerCase() === "American Literature"){
-        prompt(americanLiterature[spot]);
-    }
-    return response;
+function cashValue(cash){
+    var index = (cash/200)-1;
+    return index;
 }
 
-function gradeAnswer(response){
-    if(response === scienceAs[0].toLowerCase()){
-        player1Total+=cash
+function chooseQ(category){
+    var index = cashValue(cash);
+    if(category.toLowerCase() === "science"){
+        var response = prompt(scienceQs[index]);
+    }
+    else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
+        prompt(seventieshitsQs[index]);
+    }
+    else if(category.toLowerCase() === "Holidays"){
+        prompt(holidaysQs[index]);
+    }
+    else if(category.toLowerCase() === "American Literature"){
+        prompt(americanliteratureQs[index]);
+    }
+    return [response, index];
+}
+
+function gradeAnswer(response, spot){
+    if(response === scienceAs[spot].toLowerCase()){
         alert("Correct!");
-        
         return true;
     }
 }
