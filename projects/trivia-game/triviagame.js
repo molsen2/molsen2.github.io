@@ -40,12 +40,8 @@ alert("Are we ready for some trivia? "+player1+ ", choose your first question.")
 
 var category = prompt("Category?")
 var cash = prompt("Cash amount?");
-var returnArray = [chooseQ(category, cash)];
-alert(returnArray);
-var answer = returnArray[0];
-var index = returnArray[1];
-gradeAnswer(answer, index);
-var verdict = gradeAnswer()
+var returnArray = chooseQ(category, cash);//don't put return array into brackets b/c brackets are implied
+gradeAnswer(returnArray[0], returnArray[1]);
 
 //FUNCTIONS
 function enterNames(){
@@ -59,7 +55,7 @@ function cashValue(cash){
     return index;
 }
 
-function chooseQ(category){
+function chooseQ(category, cash){
     var index = cashValue(cash);
     if(category.toLowerCase() === "science"){
         var response = prompt(scienceQs[index]);
@@ -76,11 +72,43 @@ function chooseQ(category){
     return [response, index];
 }
 
-function gradeAnswer(response, spot){
-    if(response === scienceAs[spot].toLowerCase()){
-        alert("Correct!");
-        return true;
-    }
+function gradeAnswer(response, index){
+     if(category.toLowerCase() === "science"){   
+        if(response === scienceAs[index].toLowerCase()){
+            alert("Correct!");
+            return true;
+        }
+        else{
+            alert("Incorrect.");
+            return false;
+    }}
+    else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
+        if(response === seventieshitsAs[index].toLowerCase()){
+            alert("Correct!");
+            return true;
+        }
+        else{
+            alert("Incorrect.");
+            return false;
+    }}
+    else if(category.toLowerCase() === "holidays"){
+        if(response === holidaysAs[index].toLowerCase){
+            alert("Correct!");
+            return true;
+        }
+        else{
+            alert("Incorrect");
+            return false;
+    }}
+    else if(category.toLowerCase() === "american literature"){
+        if(response === americanLiteratureAs[index].toLowerCase()){
+            alert("Correct!");
+            return true;
+        }
+        else{
+            alert("Incorrect.");
+            return false;
+    }}
 }
 
 function correctAnswer(){
