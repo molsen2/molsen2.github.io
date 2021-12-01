@@ -16,4 +16,4 @@ function assignNum(){
     return randomNum;
 }*/
 
-alert("Does this work?");
+document.write("<p> Does this work? </p>");
