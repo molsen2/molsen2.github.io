@@ -46,6 +46,8 @@ function enterNames(){
     return name;
 }
 
+function cashValue(){}
+
 function chooseQ(){
     var category = prompt("Category?");
     var cash = prompt("Cash amount?");
@@ -65,6 +67,7 @@ function chooseQ(){
     else if(category.toLowerCase() === "American Literature"){
         prompt(americanLiterature[spot]);
     }
+    return spot;
 }
 
 function gradeAnswer(response){
