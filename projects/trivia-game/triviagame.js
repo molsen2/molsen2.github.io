@@ -8,12 +8,17 @@ var fourthRowQs = ["The study of optics has to do with..."];
 var fifthRowQs = ["This refers to the amount of blood cells in a certain amount of blood."];
 var sixthRowQs = ["This prominent Renaissance scientist is credited with the discovery of the pendulum."];*/
 
-var science = ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
+var scienceQs = ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
+scienceQs.push("What Saturn moon has a methane cycle that differentiates it from other moons of the planet?");
+scienceQs.push("What does ATP, the molecular unit of energy, stand for?");
+scienceQs.push("What does the study of optics have to do with?");
+scienceQs.push("What is the name of the amount of blood cells in a certain amount of blood?");
+scienceQs.push("Which prominent Renaissanc scientist is credited with the discovery of the penulum?");
 var seventieshitsQs = [];
 var holidaysQs = [];
 var americanliteratureQs = [];
 
-var scienceAs = ["Ethanoic Acid"];
+var scienceAs = ["Ethanoic Acid", "Titan", "Adenosine Triphosphate", "Light", "Hematocrit", "Galilei"]
 var seventieshitsAs = [];
 var holidaysAs = [];
 var americanLiteratureAs = [];
