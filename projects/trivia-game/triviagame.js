@@ -8,13 +8,13 @@ var fourthRowQs = ["The study of optics has to do with..."];
 var fifthRowQs = ["This refers to the amount of blood cells in a certain amount of blood."];
 var sixthRowQs = ["This prominent Renaissance scientist is credited with the discovery of the pendulum."];*/
 
-var scienceQs = ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
-var seventiesHitsQs = [];
+var science = ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
+var seventieshitsQs = [];
 var holidaysQs = [];
-var americanLiteratureQs = [];
+var americanliteratureQs = [];
 
-var scienceAs = [];
-var seventiesHitsAs = [];
+var scienceAs = ["Ethanoic Acid"];
+var seventieshitsAs = [];
 var holidaysAs = [];
 var americanLiteratureAs = [];
 
@@ -31,7 +31,8 @@ alert("You will have four categories today with six questions each. The categori
 alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar amounts range from $200-$1,000 and increase by $200 for each row of questions.")
 alert("There will be one Daily Double among the questions where you can wager at least $1,000.")
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
-chooseQ();
+var answer = chooseQ();
+gradeAnswer(answer);
 
 //FUNCTIONS
 function enterNames(){
@@ -44,17 +45,25 @@ function chooseQ(){
     var category = prompt("Category?");
     var cash = prompt("Cash amount?");
     var spot = (cash/200)-1;
-    if(category === "Science"){
-        alert(scienceQs[spot]);
+    if(category.toLowerCase() === "science"){
+        var answer = prompt(science[spot]);
+        return answer;
     }
-    else if(category === "Seventies' Hits"){
-        alert(seventiesHits[spot]);
+    else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
+        prompt(seventieshitsQs[spot]);
     }
-    else if(category === "Holidays"){
-        alert(holidays[spot]);
+    else if(category.toLowerCase() === "Holidays"){
+        prompt(holidays[spot]);
     }
-    else if(category === "American Literature"){
-        alert(americanLiterature[spot]);
+    else if(category.toLowerCase() === "American Literature"){
+        prompt(americanLiterature[spot]);
     }
+}
+
+function gradeAnswer(response){
+    if(response === scienceAs[0].toLowerCase()){
+        console.log("Correct!");
+    }
+
 }
 
