@@ -29,6 +29,12 @@ var seventiesHitsAs = ["freddie mercury", "paul", "abba", "jimi hendrix", "a cul
 var holidaysAs = ["kwanzaa", "africa", "the great pumpkin", "all saint's day", "turkey"];
 var americanLiteratureAs = ["the louvre", "jerome david", "the legend of sleepy hollow", "maycomb", "george and lennie"];
 
+//DOLLAR ARRAY
+var scienceDollars = [true, true, true, true, true];
+var seventiesHitsDollars = [true, true, true, true, true];
+var holidaysDollars = [true, true, true, true, true];
+var americanLiteratureDollars = [true, true, true, true, true];
+
 //GAME
 document.write("<h1> Science </h1>");
 displayDollars();
@@ -97,6 +103,7 @@ function gradeAnswer(response, index){
      if(category.toLowerCase() === "science"){   
         if(response.toLowerCase() === scienceAs[index]){
             alert("Correct!");
+            scienceDollars[index] = false;
             return true;
         }
         else{
@@ -110,30 +117,45 @@ function gradeAnswer(response, index){
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
         if(response.toLowerCase() === seventiesHitsAs[index]){
             alert("Correct!");
+            seventiesHitsDollars[index] = false;
             return true;
         }
         else{
-            alert("Incorrect. Would another player like to answer?");
-            return false;
-    }}
+            var yesOrNo = ("Incorrect. Would another player like to answer?");
+            if(yesOrNo.toLowerCase() === "yes"){
+                reAnswer();
+            }
+            else{
+                return false;
+    }}}
     else if(category.toLowerCase() === "holidays"){
         if(response.toLowerCase() === holidaysAs[index]){
             alert("Correct!");
+            holidaysDollars[index] = false;
             return true;
         }
         else{
-            alert("Incorrect. Would another player like to answer?");
-            return false;
-    }}
+            var yesOrNo = ("Incorrect. Would another player like to answer?");
+            if(yesOrNo.toLowerCase() === "yes"){
+                reAnswer();
+            }
+            else{
+                return false;
+    }}}
     else if(category.toLowerCase() === "american literature"){
         if(response.toLowerCase() === americanLiteratureAs[index]){
             alert("Correct!");
+            americanLiteratureDollars[index] = false;
             return true;
         }
         else{
-            alert("Incorrect. Would another player like to answer?");
-            return false;
-    }}
+            var yesOrNo = ("Incorrect. Would another player like to answer?");
+            if(yesOrNo.toLowerCase() === "yes"){
+                reAnswer();
+            }
+            else{
+                return false;
+    }}}
 }
 
 function choosePlayer(name, correctness){
@@ -180,3 +202,7 @@ function reAnswer(){
     var player = prompt("Which player answered?");
     choosePlayer(player, verdict);
 }
+
+//Do/ While loop for amount of times it is run
+//assign dollar values with true/false; true is available, false is unavailable
+//send error message if false
