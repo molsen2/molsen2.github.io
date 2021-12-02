@@ -1,32 +1,37 @@
-/*var firstRowQs= ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
-firstRowQs.push("The Doors got their name from a book written by this author.");
-firstRowQs.push("Scholar and activist Dr. Maulana Karenga established this holiday in California in 1966.");
-firstRowQs.push("In which U.S. state was the asylum of One Flew Over the Cuckoo's Nest located?");
-var secondRowQs = ["This Saturn moon has a methane cycle, differentiating it from the other moons of the planet."];
-var thirdRowQs = ["ATP, which stands for this, is the molecular unit of energy that gives our bodied fuel on a cellular level."];
-var fourthRowQs = ["The study of optics has to do with..."];
-var fifthRowQs = ["This refers to the amount of blood cells in a certain amount of blood."];
-var sixthRowQs = ["This prominent Renaissance scientist is credited with the discovery of the pendulum."];*/
-
+//TRIVIA QUESTIONS
 var scienceQs = ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
 scienceQs.push("What Saturn moon has a methane cycle that differentiates it from other moons of the planet?");
 scienceQs.push("What does ATP, the molecular unit of energy, stand for?");
 scienceQs.push("What does the study of optics have to do with?");
 scienceQs.push("What is the name of the amount of blood cells in a certain amount of blood?");
 scienceQs.push("Which prominent Renaissanc scientist is credited with the discovery of the penulum?");
-var seventieshitsQs = ["A book by what author inpsired the band name of The Doors?"];
-seventieshitsQs.push("Which artist attributed his/her enhanced vocal range to extra teeth?");
-seventieshitsQs.push("Which Beatles member crossed the Abbey Road barefoot?");
-seventieshitsQs.push("The Swedish Europop group, ______,  got their name by taking the first letter of each member's name.");
-seventieshitsQs.push("During a performance at the London Astoria, what rock star smashed his guitar?");
-seventieshitsQs.push("Fleetwood Mac's lead guitarist, Jeremy Spencer, left the band in 1971 to join what?");
-var holidaysQs = [];
-var americanliteratureQs = [];
 
-var scienceAs = ["Ethanoic Acid", "Titan", "Adenosine Triphosphate", "Light", "Hematocrit", "Galilei"];
-var seventieshitsAs = ["Aldous Huxley", "Freddie Mercury", "Paul", "ABBA", "Jimi Hendrix", "A cult"];
-var holidaysAs = [];
-var americanLiteratureAs = [];
+var seventiesHitsQs = ["A book by what author inpsired the band name of The Doors?"];
+seventiesHitsQs.push("Which artist attributed his/her enhanced vocal range to extra teeth?");
+seventiesHitsQs.push("Which Beatles member crossed the Abbey Road barefoot?");
+seventiesHitsQs.push("The Swedish Europop group, ______,  got their name by taking the first letter of each member's name.");
+seventiesHitsQs.push("During a performance at the London Astoria, what rock star smashed his guitar?");
+seventiesHitsQs.push("Fleetwood Mac's lead guitarist, Jeremy Spencer, left the band in 1971 to join what?");
+
+var holidaysQs = ["Scholar and activist Dr. Maulana Karenga established what holiday in California in 1966?"];
+holidaysQs.push("Which creative holiday takes place on March 26?");
+holidaysQs.push("The practice of decorating Easter eggs can be traced back to what country?");
+holidaysQs.push("Every Halloween, Charlie Brown helps his friend Linus wait for what character to appear?");
+holidaysQs.push("The holiday that takes place the day after Halloween is...")
+holidaysQs.push("In which modern country was St. Nicholas born?");
+
+var americanLiteratureQs = ["In which U.S. state was the asylum of One Flew Over the Cuckoo's Nest located?"];
+americanLiteratureQs.push("Dan Brown's Da Vinci Code opens with a murder in which famous museum?");
+americanLiteratureQs.push("What do the initials J.D. stand for in author J.D. Salinger's name?");
+americanLiteratureQs.push("Which story authored by Washington Irving has the character Ichabod Crane?");
+americanLiteratureQs.push("In what fictional town is Harper Lee's To Kill a Mockingbird set?");
+americanLiteratureQs.push("Who are the two main characters in Of Mice and Men? (First names only)");
+
+//TRIVIA ANSWERS
+var scienceAs = ["ethanoic acid", "titan", "adenosine triphosphate", "light", "hematocrit", "galilei"];
+var seventiesHitsAs = ["aldous huxley", "freddie mercury", "paul", "abba", "jimi hendrix", "a cult"];
+var holidaysAs = ["kwanzaa", "make up your own holiday day", "africa", "the great pumpkin", "all saint's day", "turkey"];
+var americanLiteratureAs = ["oregon", "the louvre", "jerome david", "the legend of sleepy hollow", "maycomb", "george and lennie"];
 
 var player1Total = 0; 
 var player2Total = 0; 
@@ -70,20 +75,20 @@ function chooseQ(category, cash){
         var response = prompt(scienceQs[index]);
     }
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
-        var response = prompt(seventieshitsQs[index]);
+        var response = prompt(seventiesHitsQs[index]);
     }
     else if(category.toLowerCase() === "Holidays"){
         var response = prompt(holidaysQs[index]);
     }
     else if(category.toLowerCase() === "American Literature"){
-        var response = prompt(americanliteratureQs[index]);
+        var response = prompt(americanLiteratureQs[index]);
     }
     return [response, index];
 }
 
 function gradeAnswer(response, index){
      if(category.toLowerCase() === "science"){   
-        if(response === scienceAs[index].toLowerCase()){
+        if(response.toLowerCase() === scienceAs[index]){
             alert("Correct!");
             return true;
         }
@@ -92,7 +97,7 @@ function gradeAnswer(response, index){
             return false;
     }}
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
-        if(response === seventieshitsAs[index].toLowerCase()){
+        if(response.toLowerCase() === seventiesHitsAs[index]){
             alert("Correct!");
             return true;
         }
@@ -101,7 +106,7 @@ function gradeAnswer(response, index){
             return false;
     }}
     else if(category.toLowerCase() === "holidays"){
-        if(response === holidaysAs[index].toLowerCase){
+        if(response.toLowerCase() === holidaysAs[index]){
             alert("Correct!");
             return true;
         }
@@ -110,7 +115,7 @@ function gradeAnswer(response, index){
             return false;
     }}
     else if(category.toLowerCase() === "american literature"){
-        if(response === americanLiteratureAs[index].toLowerCase()){
+        if(response.toLowerCase() === americanLiteratureAs[index]){
             alert("Correct!");
             return true;
         }
