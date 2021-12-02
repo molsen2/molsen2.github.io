@@ -29,7 +29,7 @@ var seventiesHitsAs = ["freddie mercury", "paul", "abba", "jimi hendrix", "a cul
 var holidaysAs = ["kwanzaa", "africa", "the great pumpkin", "all saint's day", "turkey"];
 var americanLiteratureAs = ["the louvre", "jerome david", "the legend of sleepy hollow", "maycomb", "george and lennie"];
 
-//DOLLAR ARRAY
+//GAME
 document.write("<h1> Science </h1>");
 displayDollars();
 document.write("<h1> Seventies' Hits </h1>")
@@ -58,7 +58,7 @@ alert("Are we ready for some trivia? "+player1+ ", choose your first question.")
 for(var runs = 0; runs < 20; runs++){
     var category = prompt("Category?")
     var cash = prompt("Cash amount?");
-    var returnArray = chooseQ(category, cash);//don't put return array into brackets b/c brackets are implied
+    var returnArray = chooseQ(category, cash);
     var verdict = gradeAnswer(returnArray[0], returnArray[1]);
     var player = prompt("Which player answered?");
     choosePlayer(player, verdict);
@@ -100,16 +100,20 @@ function gradeAnswer(response, index){
             return true;
         }
         else{
-            alert("Incorrect.");
-            return false;
-    }}
+            var yesOrNo = ("Incorrect. Would another player like to answer?");
+            if(yesOrNo.toLowerCase() === "yes"){
+                reAnswer();
+            }
+            else{
+                return false;
+    }}}
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
         if(response.toLowerCase() === seventiesHitsAs[index]){
             alert("Correct!");
             return true;
         }
         else{
-            alert("Incorrect.");
+            alert("Incorrect. Would another player like to answer?");
             return false;
     }}
     else if(category.toLowerCase() === "holidays"){
@@ -118,7 +122,7 @@ function gradeAnswer(response, index){
             return true;
         }
         else{
-            alert("Incorrect");
+            alert("Incorrect. Would another player like to answer?");
             return false;
     }}
     else if(category.toLowerCase() === "american literature"){
@@ -127,7 +131,7 @@ function gradeAnswer(response, index){
             return true;
         }
         else{
-            alert("Incorrect.");
+            alert("Incorrect. Would another player like to answer?");
             return false;
     }}
 }
@@ -164,13 +168,15 @@ function choosePlayer(name, correctness){
         return player3Total;
     }}
 
-function correctAnswer(){
-
-}
-
 function displayDollars(){
     for(var items = 0; items < 5; items++){
         var dollars = ["200", "400", "600", "800", "1000"];
         document.write("<li>"+dollars[items]+"</li>");
     }}
 
+function reAnswer(){
+    var returnArray = chooseQ(category, cash);
+    var verdict = gradeAnswer(returnArray[0], returnArray[1]);
+    var player = prompt("Which player answered?");
+    choosePlayer(player, verdict);
+}
