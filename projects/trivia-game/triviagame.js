@@ -84,9 +84,12 @@ function cashValue(cash){
     return index;
 }
 
-function cashAssignment(input){
-    if(input === p)
-};
+/*function cashAssignment(input){
+    if(input === returnArray[1]){
+        scienceDollars2[returnArray[1]] = false;
+        scienceQs[returnArray[1]] = "Question has already been answered."
+    }
+};*/
 
 function chooseQ(category, cash){
     var index = cashValue(cash);
@@ -108,10 +111,8 @@ function chooseQ(category, cash){
 function gradeAnswer(response, index){
      if(category.toLowerCase() === "science"){   
         if(response.toLowerCase() === scienceAs[index]){
-            alert(scienceDollars2);
             alert("Correct!");
-            scienceDollars2[index] = false;
-            alert(scienceDollars2);
+            scienceQs[index] = "This question has already been answered.";
             return true;
         }
         else{
