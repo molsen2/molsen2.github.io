@@ -58,9 +58,6 @@ for(var runs = 0; runs < 10; runs++){
     choosePlayer(player, verdict);
 }
 
-
-
-
 //FUNCTIONS
 function enterNames(){
     var name = prompt("Enter Player Name");
