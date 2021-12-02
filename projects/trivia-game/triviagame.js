@@ -66,13 +66,13 @@ function chooseQ(category, cash){
         var response = prompt(scienceQs[index]);
     }
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
-        prompt(seventieshitsQs[index]);
+        var response = prompt(seventieshitsQs[index]);
     }
     else if(category.toLowerCase() === "Holidays"){
-        prompt(holidaysQs[index]);
+        var response = prompt(holidaysQs[index]);
     }
     else if(category.toLowerCase() === "American Literature"){
-        prompt(americanliteratureQs[index]);
+        var response = prompt(americanliteratureQs[index]);
     }
     return [response, index];
 }
