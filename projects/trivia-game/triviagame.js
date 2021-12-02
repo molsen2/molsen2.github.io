@@ -35,6 +35,8 @@ var seventiesHitsDollars = [true, true, true, true, true];
 var holidaysDollars = [true, true, true, true, true];
 var americanLiteratureDollars = [true, true, true, true, true];
 
+var scienceDollars2 = [200, 400, 600, 800, 1000];
+
 //GAME
 document.write("<h1> Science </h1>");
 displayDollars();
@@ -82,6 +84,10 @@ function cashValue(cash){
     return index;
 }
 
+function cashAssignment(input){
+    if(input === p)
+};
+
 function chooseQ(category, cash){
     var index = cashValue(cash);
     if(category.toLowerCase() === "science"){
@@ -102,8 +108,10 @@ function chooseQ(category, cash){
 function gradeAnswer(response, index){
      if(category.toLowerCase() === "science"){   
         if(response.toLowerCase() === scienceAs[index]){
+            alert(scienceDollars2);
             alert("Correct!");
-            scienceDollars[index] = false;
+            scienceDollars2[index] = false;
+            alert(scienceDollars2);
             return true;
         }
         else{
