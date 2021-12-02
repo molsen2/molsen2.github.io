@@ -4,7 +4,7 @@ scienceQs.push("What Saturn moon has a methane cycle that differentiates it from
 scienceQs.push("What does ATP, the molecular unit of energy, stand for?");
 scienceQs.push("What does the study of optics have to do with?");
 scienceQs.push("What is the name of the amount of blood cells in a certain amount of blood?");
-scienceQs.push("Which prominent Renaissanc scientist is credited with the discovery of the penulum?");
+scienceQs.push("Which prominent Renaissance scientist is credited with the discovery of the penulum?");
 
 var seventiesHitsQs = ["A book by what author inpsired the band name of The Doors?"];
 seventiesHitsQs.push("Which artist attributed his/her enhanced vocal range to extra teeth?");
@@ -49,13 +49,17 @@ alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar a
 alert("There will be one Daily Double among the questions where you can wager at least $1,000.")
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
 
+for(var runs = 0; runs < 10; runs++){
+    var category = prompt("Category?")
+    var cash = prompt("Cash amount?");
+    var returnArray = chooseQ(category, cash);//don't put return array into brackets b/c brackets are implied
+    var verdict = gradeAnswer(returnArray[0], returnArray[1]);
+    var player = prompt("Which player answered?");
+    choosePlayer(player, verdict);
+}
 
-var category = prompt("Category?")
-var cash = prompt("Cash amount?");
-var returnArray = chooseQ(category, cash);//don't put return array into brackets b/c brackets are implied
-var verdict = gradeAnswer(returnArray[0], returnArray[1]);
-var player = prompt("Which player answered?");
-choosePlayer(player, verdict);
+
+
 
 //FUNCTIONS
 function enterNames(){
@@ -77,10 +81,10 @@ function chooseQ(category, cash){
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
         var response = prompt(seventiesHitsQs[index]);
     }
-    else if(category.toLowerCase() === "Holidays"){
+    else if(category.toLowerCase() === "holidays"){
         var response = prompt(holidaysQs[index]);
     }
-    else if(category.toLowerCase() === "American Literature"){
+    else if(category.toLowerCase() === "american literature"){
         var response = prompt(americanLiteratureQs[index]);
     }
     return [response, index];
