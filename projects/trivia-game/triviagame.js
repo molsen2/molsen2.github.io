@@ -1,37 +1,43 @@
 //TRIVIA QUESTIONS
-var scienceQs = ["When you open a bottle of wine and leave it exposed to the air, the ethanol in it reacts with oxygen. This reaction forms..."];
-scienceQs.push("What Saturn moon has a methane cycle that differentiates it from other moons of the planet?");
+var scienceQs = ["What Saturn moon has a methane cycle that differentiates it from other moons of the planet?"];
 scienceQs.push("What does ATP, the molecular unit of energy, stand for?");
 scienceQs.push("What does the study of optics have to do with?");
 scienceQs.push("What is the name of the amount of blood cells in a certain amount of blood?");
 scienceQs.push("Which prominent Renaissance scientist is credited with the discovery of the penulum?");
 
-var seventiesHitsQs = ["A book by what author inpsired the band name of The Doors?"];
-seventiesHitsQs.push("Which artist attributed his/her enhanced vocal range to extra teeth?");
+var seventiesHitsQs = ["Which artist attributed his enhanced vocal range to extra teeth?"];
 seventiesHitsQs.push("Which Beatles member crossed the Abbey Road barefoot?");
 seventiesHitsQs.push("The Swedish Europop group, ______,  got their name by taking the first letter of each member's name.");
 seventiesHitsQs.push("During a performance at the London Astoria, what rock star smashed his guitar?");
 seventiesHitsQs.push("Fleetwood Mac's lead guitarist, Jeremy Spencer, left the band in 1971 to join what?");
 
 var holidaysQs = ["Scholar and activist Dr. Maulana Karenga established what holiday in California in 1966?"];
-holidaysQs.push("Which creative holiday takes place on March 26?");
 holidaysQs.push("The practice of decorating Easter eggs can be traced back to what country?");
 holidaysQs.push("Every Halloween, Charlie Brown helps his friend Linus wait for what character to appear?");
 holidaysQs.push("The holiday that takes place the day after Halloween is...")
 holidaysQs.push("In which modern country was St. Nicholas born?");
 
-var americanLiteratureQs = ["In which U.S. state was the asylum of One Flew Over the Cuckoo's Nest located?"];
-americanLiteratureQs.push("Dan Brown's Da Vinci Code opens with a murder in which famous museum?");
+var americanLiteratureQs = ["Dan Brown's Da Vinci Code opens with a murder in which famous museum?"];
 americanLiteratureQs.push("What do the initials J.D. stand for in author J.D. Salinger's name?");
 americanLiteratureQs.push("Which story authored by Washington Irving has the character Ichabod Crane?");
 americanLiteratureQs.push("In what fictional town is Harper Lee's To Kill a Mockingbird set?");
 americanLiteratureQs.push("Who are the two main characters in Of Mice and Men? (First names only)");
 
 //TRIVIA ANSWERS
-var scienceAs = ["ethanoic acid", "titan", "adenosine triphosphate", "light", "hematocrit", "galilei"];
-var seventiesHitsAs = ["aldous huxley", "freddie mercury", "paul", "abba", "jimi hendrix", "a cult"];
-var holidaysAs = ["kwanzaa", "make up your own holiday day", "africa", "the great pumpkin", "all saint's day", "turkey"];
-var americanLiteratureAs = ["oregon", "the louvre", "jerome david", "the legend of sleepy hollow", "maycomb", "george and lennie"];
+var scienceAs = ["titan", "adenosine triphosphate", "light", "hematocrit", "galilei"];
+var seventiesHitsAs = ["freddie mercury", "paul", "abba", "jimi hendrix", "a cult"];
+var holidaysAs = ["kwanzaa", "africa", "the great pumpkin", "all saint's day", "turkey"];
+var americanLiteratureAs = ["the louvre", "jerome david", "the legend of sleepy hollow", "maycomb", "george and lennie"];
+
+//DOLLAR ARRAY
+document.write("<h1> Science </h1>");
+displayDollars();
+document.write("<h1> Seventies' Hits </h1>")
+displayDollars();
+document.write("<h1> Holidays </h1>");
+displayDollars();
+document.write("<h1>American Literature</h1>");
+displayDollars();
 
 var player1Total = 0; 
 var player2Total = 0; 
@@ -49,7 +55,7 @@ alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar a
 alert("There will be one Daily Double among the questions where you can wager at least $1,000.")
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
 
-for(var runs = 0; runs < 10; runs++){
+for(var runs = 0; runs < 20; runs++){
     var category = prompt("Category?")
     var cash = prompt("Cash amount?");
     var returnArray = chooseQ(category, cash);//don't put return array into brackets b/c brackets are implied
@@ -161,4 +167,10 @@ function choosePlayer(name, correctness){
 function correctAnswer(){
 
 }
+
+function displayDollars(){
+    for(var items = 0; items < 5; items++){
+        var dollars = ["200", "400", "600", "800", "1000"];
+        document.write("<li>"+dollars[items]+"</li>");
+    }}
 
