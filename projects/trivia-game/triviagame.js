@@ -14,12 +14,17 @@ scienceQs.push("What does ATP, the molecular unit of energy, stand for?");
 scienceQs.push("What does the study of optics have to do with?");
 scienceQs.push("What is the name of the amount of blood cells in a certain amount of blood?");
 scienceQs.push("Which prominent Renaissanc scientist is credited with the discovery of the penulum?");
-var seventieshitsQs = [];
+var seventieshitsQs = ["A book by what author inpsired the band name of The Doors?"];
+seventieshitsQs.push("Which artist attributed his/her enhanced vocal range to extra teeth?");
+seventieshitsQs.push("Which Beatles member crossed the Abbey Road barefoot?");
+seventieshitsQs.push("The Swedish Europop group, ______,  got their name by taking the first letter of each member's name.");
+seventieshitsQs.push("During a performance at the London Astoria, what rock star smashed his guitar?");
+seventieshitsQs.push("Fleetwood Mac's lead guitarist, Jeremy Spencer, left the band in 1971 to join what?");
 var holidaysQs = [];
 var americanliteratureQs = [];
 
-var scienceAs = ["Ethanoic Acid", "Titan", "Adenosine Triphosphate", "Light", "Hematocrit", "Galilei"]
-var seventieshitsAs = [];
+var scienceAs = ["Ethanoic Acid", "Titan", "Adenosine Triphosphate", "Light", "Hematocrit", "Galilei"];
+var seventieshitsAs = ["Aldous Huxley", "Freddie Mercury", "Paul", "ABBA", "Jimi Hendrix", "A cult"];
 var holidaysAs = [];
 var americanLiteratureAs = [];
 
