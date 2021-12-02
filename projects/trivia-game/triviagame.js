@@ -28,14 +28,16 @@ var seventieshitsAs = ["Aldous Huxley", "Freddie Mercury", "Paul", "ABBA", "Jimi
 var holidaysAs = [];
 var americanLiteratureAs = [];
 
-var player1Total; var player2Total; var player3Total;
+var player1Total = 0; 
+var player2Total = 0; 
+var player3Total = 0;
 
 alert("Hello contestants, welcome to this totally off-brand trivia game!")
 alert("Choose three players and enter in their names!")
 
-player1 = enterNames();
-player2 = enterNames();
-player3 = enterNames();
+var player1 = enterNames();
+var player2 = enterNames();
+var player3 = enterNames();
 
 alert("You will have four categories today with six questions each. The categories are as follows..")
 alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar amounts range from $200-$1,000 and increase by $200 for each row of questions.")
@@ -46,7 +48,9 @@ alert("Are we ready for some trivia? "+player1+ ", choose your first question.")
 var category = prompt("Category?")
 var cash = prompt("Cash amount?");
 var returnArray = chooseQ(category, cash);//don't put return array into brackets b/c brackets are implied
-gradeAnswer(returnArray[0], returnArray[1]);
+var verdict = gradeAnswer(returnArray[0], returnArray[1]);
+var player = prompt("Which player answered?");
+choosePlayer(player, verdict);
 
 //FUNCTIONS
 function enterNames(){
@@ -115,6 +119,38 @@ function gradeAnswer(response, index){
             return false;
     }}
 }
+
+function choosePlayer(name, correctness){
+    if(name === player1 && correctness === true){
+        player1Total+= parseInt(cash);
+        alert(player1+ ": $"+player1Total)
+        return player1Total;
+    }
+    else if(name === player1 && correctness === false){
+        player1Total-=parseInt(cash);
+        alert(player1+ ": $"+player1Total)
+        return player1Total;
+    }
+    else if(name === player2 && correctness === true){
+        player2Total+=parseInt(cash);
+        alert(player2+ ": $"+player2Total)
+        return player2Total;
+    }
+    else if(name === player2 && correctness === false){
+        player2Total-=parseInt(cash);
+        alert(player2+ ": $"+player2Total)
+        return player2Total;
+    }
+    else if(name === player3 && correctness === true){
+        player3Total+=parseInt(cash);
+        alert(player3+ ": $"+player3Total)
+        return player3Total;
+    }
+    else if(name === player3 && correctness === false){
+        player3Total-=parseInt(cash);
+        alert(player3+ ": $"+player3Total)
+        return player3Total;
+    }}
 
 function correctAnswer(){
 
