@@ -93,19 +93,15 @@ function chooseQ(category, cash){
     var index = cashValue(cash);
     if(category.toLowerCase() === "science"){
         var response = prompt(scienceQs[index]);
-        scienceQs[index] = "This question has already been answered. (Click okay.)";
     }
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
         var response = prompt(seventiesHitsQs[index]);
-        seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
     }
     else if(category.toLowerCase() === "holidays"){
         var response = prompt(holidaysQs[index]);
-        holidaysQs[index] = "This question has already been answered. (Click okay.)";
     }
     else if(category.toLowerCase() === "american literature"){
         var response = prompt(americanLiteratureQs[index]);
-        americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
     }
     return [response, index];
 }
@@ -117,10 +113,12 @@ function gradeAnswer(response, index){
         }          
         else if(response.toLowerCase() === scienceAs[index]){
             alert("Correct!");
+            scienceQs[index] = "This question has already been answered. (Click okay.)";
             return true;
         }
         else{
             alert("Incorrect :(");
+            scienceQs[index] = "This question has already been answered. (Click okay.)";
             return false;
         }}
 
@@ -130,10 +128,12 @@ function gradeAnswer(response, index){
         }
         else if(response.toLowerCase() === seventiesHitsAs[index]){
             alert("Correct!");
+            seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
             return true;
         }
         else{
             alert("Incorrect :(");
+            seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
             return false;
         }}
     else if(category.toLowerCase() === "holidays"){
@@ -142,10 +142,12 @@ function gradeAnswer(response, index){
         }
         else if(response.toLowerCase() === holidaysAs[index]){
             alert("Correct!");
+            holidaysQs[index] = "This question has already been answered. (Click okay.)";
             return true;
         }
         else{
             alert("Incorrect :(");
+            holidaysQs[index] = "This question has already been answered. (Click okay.)";
             return false;
     }}
     else if(category.toLowerCase() === "american literature"){
@@ -154,10 +156,12 @@ function gradeAnswer(response, index){
         }
         else if(response.toLowerCase() === americanLiteratureAs[index]){
             alert("Correct!");
+            americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
             return true;
         }
         else{
            alert("Incorrect :(");
+           americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
             return false;
     }}}
 
