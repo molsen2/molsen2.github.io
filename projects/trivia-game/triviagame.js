@@ -75,7 +75,10 @@ do{
         choosePlayer(player, verdict);
     }   
 }
-while(i<20);
+while(i<=20);
+
+alert(player1+ ": "+ player1Total+ ", "+player2+": "+player2Total+ ", "+player3+": "+ player3Total);
+alert("It is now time for ")
 
 //FUNCTIONS
 function enterNames(){
@@ -207,15 +210,7 @@ function displayDollars(){
         document.write("<li>"+dollars[items]+"</li>");
     }}
 
-/*function reAnswer(){
-    do{
-        var returnArray = chooseQ(category, cash);
-        var verdict = gradeAnswer(returnArray[0], returnArray[1]);
-        var player = prompt("Which player answered?");
-        choosePlayer(player, verdict);
-    }
-    while(verdict[1].toLowerCase() = "yes")
-}*/
+
 
 //Do/ While loop for amount of times it is run
 //assign dollar values with true/false; true is available, false is unavailable
