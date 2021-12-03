@@ -70,9 +70,10 @@ do{
     var cash = prompt("Cash amount?");
     var returnArray = chooseQ(category, cash);
     var verdict = gradeAnswer(returnArray[0], returnArray[1]);
-   // if()
-    var player = prompt("Which player answered?");
-    choosePlayer(player, verdict);
+    if(verdict !== "no"){
+        var player = prompt("Which player answered?");
+        choosePlayer(player, verdict);
+    }   
 }
 while(i<20);
 
@@ -92,23 +93,29 @@ function chooseQ(category, cash){
     var index = cashValue(cash);
     if(category.toLowerCase() === "science"){
         var response = prompt(scienceQs[index]);
+        scienceQs[index] = "This question has already been answered. (Click okay.)";
     }
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
         var response = prompt(seventiesHitsQs[index]);
+        seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
     }
     else if(category.toLowerCase() === "holidays"){
         var response = prompt(holidaysQs[index]);
+        holidaysQs[index] = "This question has already been answered. (Click okay.)";
     }
     else if(category.toLowerCase() === "american literature"){
         var response = prompt(americanLiteratureQs[index]);
+        americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
     }
     return [response, index];
 }
 
 function gradeAnswer(response, index){
      if(category.toLowerCase() === "science"){
-        scienceQs[index] = "This question has already been answered. (Click okay.)";   
-        if(response.toLowerCase() === scienceAs[index]){
+        if(scienceQs[index] === "This question has already been answered. (Click okay.)"){
+            return "no";
+        }          
+        else if(response.toLowerCase() === scienceAs[index]){
             alert("Correct!");
             return true;
         }
@@ -118,8 +125,10 @@ function gradeAnswer(response, index){
         }}
 
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
-        seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
-        if(response.toLowerCase() === seventiesHitsAs[index]){
+        if(seventiesHitsQs[index] === "This question has already been answered. (Click okay.)"){
+            return "no";
+        }
+        else if(response.toLowerCase() === seventiesHitsAs[index]){
             alert("Correct!");
             return true;
         }
@@ -128,8 +137,10 @@ function gradeAnswer(response, index){
             return false;
         }}
     else if(category.toLowerCase() === "holidays"){
-        holidaysQs[index] = "This question has already been answered. (Click okay.)";
-        if(response.toLowerCase() === holidaysAs[index]){
+        if(holidaysQs[index] === "This question has already been answered. (Click okay.)"){
+            return "no";
+        }
+        else if(response.toLowerCase() === holidaysAs[index]){
             alert("Correct!");
             return true;
         }
@@ -138,8 +149,10 @@ function gradeAnswer(response, index){
             return false;
     }}
     else if(category.toLowerCase() === "american literature"){
-        americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
-        if(response.toLowerCase() === americanLiteratureAs[index]){
+        if(americanLiteratureQs[index] === "This question has already been answered. (Click okay.)"){
+            return "no";
+        }
+        else if(response.toLowerCase() === americanLiteratureAs[index]){
             alert("Correct!");
             return true;
         }
@@ -179,7 +192,10 @@ function choosePlayer(name, correctness){
         player3Total-=parseInt(cash);
         alert(player3+ ": $"+player3Total)
         return player3Total;
-    }}
+    }
+    else{
+
+    }
 
 function displayDollars(){
     for(var items = 0; items < 5; items++){
