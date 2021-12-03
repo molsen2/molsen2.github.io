@@ -64,16 +64,17 @@ alert("There will be one Daily Double among the questions where you can wager at
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
 
 do{
+    var i = 0;
+    i++;
     var category = prompt("Category?")
     var cash = prompt("Cash amount?");
     var returnArray = chooseQ(category, cash);
     var verdict = gradeAnswer(returnArray[0], returnArray[1]);
-    var yesOrNo = verdict[1];
-    if()
+   // if()
     var player = prompt("Which player answered?");
     choosePlayer(player, verdict);
 }
-while();
+while(i<20);
 
 //FUNCTIONS
 function enterNames(){
@@ -116,7 +117,7 @@ function gradeAnswer(response, index){
         if(response.toLowerCase() === scienceAs[index]){
             alert("Correct!");
             scienceQs[index] = "This question has already been answered. (Click okay.)";
-            return [true, scienceQs[index]];
+            return [true, "no", scienceQs[index]];
         }
         else{
             var yesOrNo = ("Incorrect. Would another player like to answer?");
@@ -131,7 +132,7 @@ function gradeAnswer(response, index){
             alert("Correct!");
             seventiesHitsDollars[index] = false;
             seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
-            return [true, seventiesHitsQs[index]];
+            return [true, "no", seventiesHitsQs[index]];
         }
         else{
             var yesOrNo = ("Incorrect. Would another player like to answer?");
@@ -146,7 +147,7 @@ function gradeAnswer(response, index){
             alert("Correct!");
             holidaysDollars[index] = false;
             holidaysQs[index] = "This question has already been answered. (Click okay.)";
-            return [true, holidaysQs[index]];
+            return [true, "no", holidaysQs[index]];
         }
         else{
             var yesOrNo = ("Incorrect. Would another player like to answer?");
@@ -161,7 +162,7 @@ function gradeAnswer(response, index){
             alert("Correct!");
             americanLiteratureDollars[index] = false;
             americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
-            return [true, americanLiteratureQs[index]];
+            return [true, "no", americanLiteratureQs[index]];
         }
         else{
             var yesOrNo = ("Incorrect. Would another player like to answer?");
@@ -218,7 +219,7 @@ function reAnswer(){
         var player = prompt("Which player answered?");
         choosePlayer(player, verdict);
     }
-    while(yesOrNo.toLowerCase() = "yes")
+    while(verdict[1].toLowerCase() = "yes")
 }
 
 //Do/ While loop for amount of times it is run
