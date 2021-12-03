@@ -63,14 +63,17 @@ alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar a
 alert("There will be one Daily Double among the questions where you can wager at least $1,000.")
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
 
-for(var runs = 0; runs < 20; runs++){
+do{
     var category = prompt("Category?")
     var cash = prompt("Cash amount?");
     var returnArray = chooseQ(category, cash);
     var verdict = gradeAnswer(returnArray[0], returnArray[1]);
+    var yesOrNo = verdict[1];
+    if()
     var player = prompt("Which player answered?");
     choosePlayer(player, verdict);
 }
+while();
 
 //FUNCTIONS
 function enterNames(){
@@ -112,8 +115,8 @@ function gradeAnswer(response, index){
      if(category.toLowerCase() === "science"){   
         if(response.toLowerCase() === scienceAs[index]){
             alert("Correct!");
-            scienceQs[index] = "This question has already been answered.";
-            return true;
+            scienceQs[index] = "This question has already been answered. (Click okay.)";
+            return [true, scienceQs[index]];
         }
         else{
             var yesOrNo = ("Incorrect. Would another player like to answer?");
@@ -121,13 +124,14 @@ function gradeAnswer(response, index){
                 reAnswer();
             }
             else{
-                return false;
+                return [false, yesOrNo];
     }}}
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
         if(response.toLowerCase() === seventiesHitsAs[index]){
             alert("Correct!");
             seventiesHitsDollars[index] = false;
-            return true;
+            seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
+            return [true, seventiesHitsQs[index]];
         }
         else{
             var yesOrNo = ("Incorrect. Would another player like to answer?");
@@ -135,13 +139,14 @@ function gradeAnswer(response, index){
                 reAnswer();
             }
             else{
-                return false;
+                return [false, yesOrNo];
     }}}
     else if(category.toLowerCase() === "holidays"){
         if(response.toLowerCase() === holidaysAs[index]){
             alert("Correct!");
             holidaysDollars[index] = false;
-            return true;
+            holidaysQs[index] = "This question has already been answered. (Click okay.)";
+            return [true, holidaysQs[index]];
         }
         else{
             var yesOrNo = ("Incorrect. Would another player like to answer?");
@@ -149,13 +154,14 @@ function gradeAnswer(response, index){
                 reAnswer();
             }
             else{
-                return false;
+                return [false, yesOrNo];
     }}}
     else if(category.toLowerCase() === "american literature"){
         if(response.toLowerCase() === americanLiteratureAs[index]){
             alert("Correct!");
             americanLiteratureDollars[index] = false;
-            return true;
+            americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
+            return [true, americanLiteratureQs[index]];
         }
         else{
             var yesOrNo = ("Incorrect. Would another player like to answer?");
@@ -163,7 +169,7 @@ function gradeAnswer(response, index){
                 reAnswer();
             }
             else{
-                return false;
+                return [false, yesOrNo];
     }}}
 }
 
@@ -206,10 +212,13 @@ function displayDollars(){
     }}
 
 function reAnswer(){
-    var returnArray = chooseQ(category, cash);
-    var verdict = gradeAnswer(returnArray[0], returnArray[1]);
-    var player = prompt("Which player answered?");
-    choosePlayer(player, verdict);
+    do{
+        var returnArray = chooseQ(category, cash);
+        var verdict = gradeAnswer(returnArray[0], returnArray[1]);
+        var player = prompt("Which player answered?");
+        choosePlayer(player, verdict);
+    }
+    while(yesOrNo.toLowerCase() = "yes")
 }
 
 //Do/ While loop for amount of times it is run
