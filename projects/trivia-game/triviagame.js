@@ -88,13 +88,6 @@ function cashValue(cash){
     return index;
 }
 
-/*function cashAssignment(input){
-    if(input === returnArray[1]){
-        scienceDollars2[returnArray[1]] = false;
-        scienceQs[returnArray[1]] = "Question has already been answered."
-    }
-};*/
-
 function chooseQ(category, cash){
     var index = cashValue(cash);
     if(category.toLowerCase() === "science"){
@@ -113,66 +106,48 @@ function chooseQ(category, cash){
 }
 
 function gradeAnswer(response, index){
-     if(category.toLowerCase() === "science"){   
+     if(category.toLowerCase() === "science"){
+        scienceQs[index] = "This question has already been answered. (Click okay.)";   
         if(response.toLowerCase() === scienceAs[index]){
             alert("Correct!");
-            scienceQs[index] = "This question has already been answered. (Click okay.)";
-            return [true, "no", scienceQs[index]];
+            return true;
         }
         else{
-            var yesOrNo = ("Incorrect. Would another player like to answer?");
-            if(yesOrNo.toLowerCase() === "yes"){
-                reAnswer();
-            }
-            else{
-                return [false, yesOrNo];
-    }}}
+            alert("Incorrect:(");
+            return false;
+        }}
+
     else if(category.toLowerCase() === "seventies' hits" || category.toLowerCase() === "seventies hits"){
+        seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
         if(response.toLowerCase() === seventiesHitsAs[index]){
             alert("Correct!");
-            seventiesHitsDollars[index] = false;
-            seventiesHitsQs[index] = "This question has already been answered. (Click okay.)";
-            return [true, "no", seventiesHitsQs[index]];
+            return true;
         }
         else{
-            var yesOrNo = ("Incorrect. Would another player like to answer?");
-            if(yesOrNo.toLowerCase() === "yes"){
-                reAnswer();
-            }
-            else{
-                return [false, yesOrNo];
-    }}}
+            alert("Incorrect:(");
+            return false;
+        }}
     else if(category.toLowerCase() === "holidays"){
+        holidaysQs[index] = "This question has already been answered. (Click okay.)";
         if(response.toLowerCase() === holidaysAs[index]){
             alert("Correct!");
-            holidaysDollars[index] = false;
-            holidaysQs[index] = "This question has already been answered. (Click okay.)";
-            return [true, "no", holidaysQs[index]];
+            return true;
         }
         else{
-            var yesOrNo = ("Incorrect. Would another player like to answer?");
-            if(yesOrNo.toLowerCase() === "yes"){
-                reAnswer();
-            }
-            else{
-                return [false, yesOrNo];
-    }}}
+            alert("Incorrect:(");
+            return false;
+    }}
     else if(category.toLowerCase() === "american literature"){
+        americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
         if(response.toLowerCase() === americanLiteratureAs[index]){
             alert("Correct!");
-            americanLiteratureDollars[index] = false;
-            americanLiteratureQs[index] = "This question has already been answered. (Click okay.)";
-            return [true, "no", americanLiteratureQs[index]];
+            return true;
         }
         else{
-            var yesOrNo = ("Incorrect. Would another player like to answer?");
-            if(yesOrNo.toLowerCase() === "yes"){
-                reAnswer();
-            }
-            else{
-                return [false, yesOrNo];
+           alert("Incorrect:(");
+            return false;
     }}}
-}
+
 
 function choosePlayer(name, correctness){
     if(name === player1 && correctness === true){
@@ -212,7 +187,7 @@ function displayDollars(){
         document.write("<li>"+dollars[items]+"</li>");
     }}
 
-function reAnswer(){
+/*function reAnswer(){
     do{
         var returnArray = chooseQ(category, cash);
         var verdict = gradeAnswer(returnArray[0], returnArray[1]);
@@ -220,7 +195,7 @@ function reAnswer(){
         choosePlayer(player, verdict);
     }
     while(verdict[1].toLowerCase() = "yes")
-}
+}*/
 
 //Do/ While loop for amount of times it is run
 //assign dollar values with true/false; true is available, false is unavailable
