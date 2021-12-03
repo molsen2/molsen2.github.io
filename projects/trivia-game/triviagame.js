@@ -78,7 +78,8 @@ do{
 while(i<=20);
 
 alert(player1+ ": "+ player1Total+ ", "+player2+": "+player2Total+ ", "+player3+": "+ player3Total);
-alert("It is now time for ")
+var winnerName = compareScores(player1Total, player2Total, player3Total);
+alert("The winner of this round of Jeopardy is...." +winnerName+"!" );
 
 //FUNCTIONS
 function enterNames(){
@@ -209,6 +210,21 @@ function displayDollars(){
         var dollars = ["200", "400", "600", "800", "1000"];
         document.write("<li>"+dollars[items]+"</li>");
     }}
+
+function compareScores(score1, score2, score3){
+    var winner = Math.max(score1, score2, score3);
+    if(winner === score1){
+        winnerName = player1;
+        return player1;
+    }
+    else if(winner === score2){
+        winnerName = player2;
+        return player2;
+    }
+    else if(winner === score3){
+        winnerName = player3;
+        return player3;
+}}
 
 
 
