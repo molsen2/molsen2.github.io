@@ -120,7 +120,7 @@ function gradeAnswer(response, index){
             return true;
         }
         else{
-            alert("Incorrect:(");
+            alert("Incorrect :(");
             return false;
         }}
 
@@ -133,7 +133,7 @@ function gradeAnswer(response, index){
             return true;
         }
         else{
-            alert("Incorrect:(");
+            alert("Incorrect :(");
             return false;
         }}
     else if(category.toLowerCase() === "holidays"){
@@ -145,7 +145,7 @@ function gradeAnswer(response, index){
             return true;
         }
         else{
-            alert("Incorrect:(");
+            alert("Incorrect :(");
             return false;
     }}
     else if(category.toLowerCase() === "american literature"){
@@ -157,7 +157,7 @@ function gradeAnswer(response, index){
             return true;
         }
         else{
-           alert("Incorrect:(");
+           alert("Incorrect :(");
             return false;
     }}}
 
@@ -195,7 +195,7 @@ function choosePlayer(name, correctness){
     }
     else{
 
-    }
+    }}
 
 function displayDollars(){
     for(var items = 0; items < 5; items++){
