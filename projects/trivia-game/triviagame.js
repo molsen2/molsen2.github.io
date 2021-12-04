@@ -29,14 +29,6 @@ var seventiesHitsAs = ["freddie mercury", "paul", "abba", "jimi hendrix", "a cul
 var holidaysAs = ["kwanzaa", "africa", "the great pumpkin", "all saint's day", "turkey"];
 var americanLiteratureAs = ["the louvre", "jerome david", "the legend of sleepy hollow", "maycomb", "george and lennie"];
 
-//DOLLAR ARRAY
-var scienceDollars = [true, true, true, true, true];
-var seventiesHitsDollars = [true, true, true, true, true];
-var holidaysDollars = [true, true, true, true, true];
-var americanLiteratureDollars = [true, true, true, true, true];
-
-var scienceDollars2 = [200, 400, 600, 800, 1000];
-
 //GAME
 document.write("<h1> Science </h1>");
 displayDollars();
@@ -58,9 +50,10 @@ var player1 = enterNames();
 var player2 = enterNames();
 var player3 = enterNames();
 
-alert("You will have four categories today with six questions each. The categories are as follows..")
-alert("Science, Seventies' Hits, Holidays, and American Literature. The dollar amounts range from $200-$1,000 and increase by $200 for each row of questions.")
-alert("There will be one Daily Double among the questions where you can wager at least $1,000.")
+alert("You will have four categories today with five questions each. The categories are as follows...")
+alert("Science, Seventies' Hits, Holidays, and American Literature.");
+alert("For each category, there will be questions worth $200, $400, $600, $800, and $1000.");
+alert("Rules: +<li>+ If a player answers incorrectly, the other players will not be able to answer +</li> +<li>The player that entered the correct answer gets to choose the next quetsion +</li> +<li>Please enter your name in properly, so you can be awarded your money</li>");
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
 
 do{
