@@ -100,6 +100,9 @@ function chooseQ(category, cash){
     else if(category.toLowerCase() === "american literature"){
         var response = prompt(americanLiteratureQs[index]);
     }
+    else{
+        alert("Please pick a provided category.");
+    }
     return [response, index];
 }
 
