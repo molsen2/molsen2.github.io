@@ -68,7 +68,9 @@ do{
         choosePlayer(player, verdict);
     }   
 }
-while(scienceQs !== seventiesHitsQs && holidaysQs !== americanLiteratureQs && scienceQs !== holidaysQs);
+while(scienceQs !== seventiesHitsQs/* && holidaysQs !== americanLiteratureQs && scienceQs !== holidaysQs*/);
+console.log(scienceQs);
+console.log(seventiesHitsQs);
 
 alert(player1+ ": "+ player1Total+ ", "+player2+": "+player2Total+ ", "+player3+": "+ player3Total);
 var winnerName = compareScores(player1Total, player2Total, player3Total);
