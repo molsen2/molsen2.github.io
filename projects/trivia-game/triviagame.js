@@ -3,12 +3,12 @@ var scienceQs = ["What Saturn moon has a methane cycle that differentiates it fr
 scienceQs.push("What does ATP, the molecular unit of energy, stand for?");
 scienceQs.push("What does the study of optics have to do with?");
 scienceQs.push("What is the name of the amount of blood cells in a certain amount of blood?");
-scienceQs.push("Which prominent Renaissance scientist is credited with the discovery of the penulum?");
+scienceQs.push("Which prominent Renaissance scientist is credited with the discovery of the pendulum?(Last name only)");
 
-var seventiesHitsQs = ["Which artist attributed his enhanced vocal range to extra teeth?"];
-seventiesHitsQs.push("Which Beatles member crossed the Abbey Road barefoot?");
+var seventiesHitsQs = ["Which artist attributed his enhanced vocal range to extra teeth?(First and last name)"];
+seventiesHitsQs.push("Which Beatles member crossed the Abbey Road barefoot?(First name only)");
 seventiesHitsQs.push("The Swedish Europop group, ______,  got their name by taking the first letter of each member's name.");
-seventiesHitsQs.push("During a performance at the London Astoria, what rock star smashed his guitar?");
+seventiesHitsQs.push("During a performance at the London Astoria, what rock star smashed his guitar?(First and last name)");
 seventiesHitsQs.push("Fleetwood Mac's lead guitarist, Jeremy Spencer, left the band in 1971 to join what?");
 
 var holidaysQs = ["Scholar and activist Dr. Maulana Karenga established what holiday in California in 1966?"];
@@ -25,7 +25,7 @@ americanLiteratureQs.push("Who are the two main characters in Of Mice and Men? (
 
 //TRIVIA ANSWERS
 var scienceAs = ["titan", "adenosine triphosphate", "light", "hematocrit", "galilei"];
-var seventiesHitsAs = ["freddie mercury", "paul", "abba", "jimi hendrix", "a cult"];
+var seventiesHitsAs = ["freddie mercury", "paul", "abba", "jimi hendrix", "cult"];
 var holidaysAs = ["kwanzaa", "africa", "the great pumpkin", "all saint's day", "turkey"];
 var americanLiteratureAs = ["the louvre", "jerome david", "the legend of sleepy hollow", "maycomb", "george and lennie"];
 
@@ -68,7 +68,7 @@ do{
         choosePlayer(player, verdict);
     }   
 }
-while(scienceQs !== seventiesHitsQs !== holidaysQs !== americanLiteratureQs);
+while(scienceQs !== seventiesHitsQs && holidaysQs !== americanLiteratureQs && scienceQs !== holidaysQs);
 
 alert(player1+ ": "+ player1Total+ ", "+player2+": "+player2Total+ ", "+player3+": "+ player3Total);
 var winnerName = compareScores(player1Total, player2Total, player3Total);
