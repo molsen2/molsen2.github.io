@@ -43,7 +43,7 @@ var player1Total = 0;
 var player2Total = 0; 
 var player3Total = 0;
 
-alert("Hello contestants, welcome to this totally off-brand trivia game!")
+alert("Hello contestants, welcome to this totally fun, entertaining trivia game!")
 alert("Choose three players and enter in their names!")
 
 var player1 = enterNames();
@@ -53,7 +53,7 @@ var player3 = enterNames();
 alert("You will have four categories today with five questions each. The categories are as follows...")
 alert("Science, Seventies' Hits, Holidays, and American Literature.");
 alert("For each category, there will be questions worth $200, $400, $600, $800, and $1000.");
-alert("Rules: \n 1. If a player answers incorrectly, the other players will not be able to answer. /n 2. The player that entered the correct answer gets to choose the next question. /n 3. Please enter your name in properly, so you can be awarded your money.");
+alert("Rules: \n 1. If a player answers incorrectly, the other players will not be able to answer. \n 2. The player that entered the correct answer gets to choose the next question. \n 3. Please enter your name in properly, so you can be awarded your money.");
 alert("Are we ready for some trivia? "+player1+ ", choose your first question.");
 
 do{
