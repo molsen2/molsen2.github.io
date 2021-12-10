@@ -68,7 +68,7 @@ do{
         choosePlayer(player, verdict);
     }   
 }
-while(scienceQs !== seventiesHitsQs/* && holidaysQs !== americanLiteratureQs && scienceQs !== holidaysQs*/);
+while(i <10/*scienceQs !== seventiesHitsQs && holidaysQs !== americanLiteratureQs && scienceQs !== holidaysQs*/);
 console.log(scienceQs);
 console.log(seventiesHitsQs);
 
